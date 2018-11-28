@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="./css/styles.css">
+ <link rel="stylesheet" href="./css/responsive.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+ <title>SamirGannemIO</title>
+</head>
+<body>
+ <div class="container">
+   <!-- navbar -->
+  <div class="navbar-wrapper">
+   <div class="navbar">
+    <div class="left-navbar-side">
+     <div class="navbar-link nav-home">
+      <i class="fas fa-home"></i>
+     </div>
+    </div>
+    <div class="right-navbar-side">
+     <ul class="navbar-links">
+      <li class="navbar-link-button">
+       <span href="#" class="navbar-link nav-contact">
+         Contato
+       </span>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <span class="progress-bar">
+   </span>
+  </div>
+  <!-- hero -->
+  <div class="hero-container">
+   <div class="hero-image"></div>
+   <div class="hero-content">
+    <div class="hero-header">
+     <h1>
+      <span class="name">Samir</span>
+      <span class="last-name">Gannem</span> 
+     </h1>
+     <p class="slogan">Soluções de <span class="ti">TI</span></p>
+    </div>
+   </div>
+  </div>
+  <!-- section-1 -->
+  <div class="content-section services">
+    <div class="row" id="row-1">
+     <div class="service-container">
+      <div class="image" style="background: url('./images/maintenance.jpg')"></div>
+      <div class="service-description">
+       <h2 class="service-header">Manutenção</h2>
+       <p class="service-paragraph">Limpeza Desinfecção de vírus. Otimização do Sistema. Mudança de peças</p>
+      </div>
+     </div>
+     <div class="service-container">
+      <div class="image" style="background: url('./images/diagnostic.jpeg')"></div>
+      <div class="service-description">
+       <h2 class="service-header">Diagnóstico</h2>
+       <p class="service-paragraph">Falha de componentes. Falhas no sistema operacional</p>
+      </div>
+     </div>  
+    </div>
+
+    <div class="row" id="row-2">
+     <div class="service-container">
+      <div class="image" style="background: url('./images/server.jpeg')"></div>
+      <div class="service-description">
+       <h2 class="service-header">Servidores</h2>
+       <p class="service-paragraph">Instalação e Manutenção de Servidores de Rede. Servidores para Controle de Banda. RAID</p>
+      </div>
+     </div>
+     <div class="service-container">
+      <div class="image" style="background: url('./images/smartphone.jpeg')"></div>
+      <div class="service-description">
+       <h2 class="service-header">Telefones | Tablets</h2>
+       <p class="service-paragraph">Mudança de placa. Alteração / atualização do sistema operacional. Diagnóstico e revisão. Correção de falhas</p>
+      </div>
+     </div>  
+    </div>    
+
+    <div class="row" id="row-2">
+     <div class="service-container">
+      <div class="image" style="background: url('./images/laptop.jpeg')"></div>
+      <div class="service-description">
+       <h2 class="service-header">Notebooks</h2>
+       <p class="service-paragraph">Desmontagem. Limpeza. Mudança de Peças. Correção de componentes com falha</p>
+      </div>
+     </div>
+     <div class="service-container">
+      <div class="image" style="background: url('./images/printer.jpeg')"></div>
+      <div class="service-description">
+       <h2 class="service-header">Impressoras | Plotter</h2>
+       <p class="service-paragraph">Desmontagem. Limpeza. Manutenção. Mudança de Consumíveis</p>
+      </div>
+     </div>  
+    </div>      
+  </div>
+  <div class="content-section contact">
+   <div class="map-wrapper">
+    <div class="map"></div>
+    <span class="address">Jardim Campo Verde III, Rua Travessa Iguaçu, 391. Campo Verde, MT</span>
+   </div>
+   <form class="contact-form" action="https://formspree.io/sgannem@gmail.com"
+   method="POST">
+    <h2>Contato</h2>
+    <input type="text" name="name" id="input-name" placeholder="Nome" autocomplete="off">
+    <input type="text" name="_replyto" id="input-email" placeholder="Email" autocomplete="off">
+    <textarea name="message" id="input-message" cols="10" rows="10" placeholder="Mensagem" autocomplete="off"></textarea>
+    <input type="submit" name="submit" value="Enviar">
+   </form>
+  </div>
+  <div class="whatsapp-button" href="https://api.whatsapp.com/send?phone=556699331539">
+  </div>
+  <footer>
+    <div class="go-top">
+     <i class="fas fa-chevron-up"></i>
+    </div>
+  </footer>
+ </div>
+ <!-- scripts -->
+ <script src="./js/map.js"></script>
+ <script src="./js/main.js"></script>
+ <script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDacYI4R5XwKyPjIM86C1Tvb1EId1hDmfY&callback=initMap">
+ </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 * {
  box-sizing: border-box;
  margin: 0;
@@ -35,7 +35,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	--translucent: rgba(66, 10, 59, 0.8);
 	--for-clear-bg: #42243E;
 	--container-bg: rgb(243, 243, 243);
-	--for-shadows: rgba(0, 0, 0, 0.2);
+	--for-shadows: rgba(0, 0, 0, 0.35);
 	--for-paragraphs: rgb(58, 58, 58);
 	--for-headers: rgb(53, 53, 53);
 }
@@ -155,7 +155,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 }
 .name, .last-name {
 	display: inline-block;
-	font-family: inherit;
+	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 	font-size: 1.5em;
 	text-shadow: -1px 5px 5px var(--for-shadows);
 }
@@ -164,13 +164,16 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 }
 .slogan {
 	font-size: 1.2em;
+	font-family: 'Fira Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	text-shadow: -1px 5px 5px var(--for-shadows);
+	color: var(--white);
+	font-style: oblique;
 }
 .ti {
 	font-size: inherit;
 	font-family: inherit;
 	display: inline-block;
 	color: inherit;
-	background: var(--translucent);
 	padding: 5px 10px;
 	border: 1px solid var(--color-2);
 }

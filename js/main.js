@@ -7,7 +7,11 @@ const DOMElements = {
  'navbar': document.querySelector('.navbar'),
  'serviceDescription': Array.from(document.querySelectorAll('.service-description'))
 }
-// Click Event Handler
+
+//
+// handlers
+//
+// click event handler
 window.addEventListener('click', e => {
  const eventTarget = e.target;
 
@@ -21,18 +25,20 @@ window.addEventListener('click', e => {
   scrollToTop(DOMElements);
  }
 });
-// Scroll Event Handler
+// scroll event handler
 window.addEventListener('scroll', e => {
  wAppAndNavStyling(DOMElements);
 });
 
-// Resize Event Handler
+// resize event handler
 window.addEventListener('resize', e => {
  if(window.innerHeight > 820) {
   fixServicesHeight(DOMElements);
  }
 })
-
+//
+// functions
+//
 function redirectWhatsapp() {
  const num = 556699331539;
  const url = 'https://api.whatsapp.com/send?phone=';
@@ -45,11 +51,17 @@ function scrollToContact(DOMElements) {
   behavior: 'smooth'
  });
 }
+function scrollToTop(DOMElements) {
+ const { heroContainer } = DOMElements;
+ heroContainer.scrollIntoView({
+  behavior: 'smooth'
+ })
+}
 
 function wAppAndNavStyling(DOMElements) {
  const { whatsAppButton, heroContainer, navbar } = DOMElements;
  const triggerHeight = heroContainer.offsetHeight;
-
+ 
  if (window.pageYOffset > triggerHeight) {
   whatsAppButton.style.transform = 'translateX(0)';
   navbar.style.background = 'var(--translucent)';
@@ -57,12 +69,6 @@ function wAppAndNavStyling(DOMElements) {
   whatsAppButton.style.transform = 'translateX(120%)';
   navbar.style.background = 'var(--transparent)';
  }
-}
-function scrollToTop(DOMElements) {
- const { heroContainer } = DOMElements;
- heroContainer.scrollIntoView({
-  behavior: 'smooth'
- })
 }
 function fixServicesHeight(DOMElements) {
  const { serviceDescription } = DOMElements;

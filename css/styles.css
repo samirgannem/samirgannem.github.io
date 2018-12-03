@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 * {
- box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+         box-sizing: border-box;
  margin: 0;
  padding: 0;
 }
@@ -36,6 +37,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	--for-clear-bg: #42243E;
 	--container-bg: rgb(243, 243, 243);
 	--for-shadows: rgba(0, 0, 0, 0.35);
+	--for-shadows-2: rgba(0, 0, 0, 0.15);
 	--for-paragraphs: rgb(58, 58, 58);
 	--for-headers: rgb(53, 53, 53);
 }
@@ -63,13 +65,24 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	width: 100%;
 }
 .navbar {
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- flex-direction: row;
- justify-content: space-between;
- align-items: center;
+ -webkit-box-orient: horizontal;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: row;
+         flex-direction: row;
+ -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+         justify-content: space-between;
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
 	padding: 10px 100px;
  background: var(--transparent);
 	width: 100%;
+	-webkit-transition: background 0.3s;
+	-o-transition: background 0.3s;
 	transition: background 0.3s;
 	z-index: 10;
 }
@@ -97,6 +110,8 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
  border-radius: 5px;
  background: rgba(0, 0, 0, 0);
 	border: 1px solid #fff;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
 	transition: all 0.5s;
 }
 .navbar-link.nav-contact {
@@ -110,6 +125,8 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
  position: static;
  top: 0;
  left: 0;
+ background: -webkit-radial-gradient( var(--color-2), var(--color-3), var(--color-4) );
+ background: -o-radial-gradient( var(--color-2), var(--color-3), var(--color-4) );
  background: radial-gradient( var(--color-2), var(--color-3), var(--color-4) );
 	width: 100%;
 	border-bottom: 4px solid var(--color-5);
@@ -124,12 +141,17 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
  background-position: center;
  width: 100%;
  height: 100vh;
- filter: opacity(20%) saturate(10%);
+ -webkit-filter: opacity(20%) saturate(10%);
+         filter: opacity(20%) saturate(10%);
 }
 
 .hero-content {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;	
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;	
  position: absolute;
  top: 0;
  left: 0;
@@ -188,21 +210,38 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 }
 .row {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: flex-start;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 }
 .service-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	background: rgba(255, 255, 255, 0.5);
 	width: calc(100%/2);
 	margin: 10px;
-	box-shadow: -1px 2px 5px 1px var(--for-shadows);
+	-webkit-box-shadow: -1px 2px 5px 1px var(--for-shadows);
+	        box-shadow: -1px 2px 5px 1px var(--for-shadows);
 	border-radius: 5px;
 	text-align: center;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 .service-description {
 	padding: 25px;
@@ -219,16 +258,29 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 }
 /* Contact  */
 .content-section.contact {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 .contact-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	flex-basis: 30%;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-preferred-size: 30%;
+	    flex-basis: 30%;
 	margin: 0 7px;
 	background: var(--white);
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 	padding: 20px;
 	border-radius: 5px;
 }
@@ -242,6 +294,16 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	padding: 10px;
 	font-family: inherit;
 	border-radius: 5px;
+	box-shadow: inset 1px 1px 5px var(--for-shadows-2);
+}
+::-webkit-input-placeholder {
+	color: var(--for-paragraphs);
+}
+:-ms-input-placeholder {
+	color: var(--for-paragraphs);
+}
+::-ms-input-placeholder {
+	color: var(--for-paragraphs);
 }
 ::placeholder {
 	color: var(--for-paragraphs);
@@ -265,6 +327,7 @@ textarea {
 	border: 1px solid var(--for-shadows);
 	resize: none;
 	border-radius: 5px;
+	box-shadow: inset 1px 1px 5px var(--for-shadows-2);
 }
 input[type="text"]:focus, textarea:focus {
 	outline: none;
@@ -275,7 +338,8 @@ form h2 {
 /* Map */
 .map-wrapper {
 	display: block;
-	flex-basis: 70%;
+	-ms-flex-preferred-size: 70%;
+	    flex-basis: 70%;
 	margin: 0 7px;
 }
 .map {
@@ -307,23 +371,33 @@ form h2 {
 	background-size: cover;
 	width: 50px;
 	height: 50px;
+	-webkit-transition: 0.2s 0s all;
+	-o-transition: 0.2s 0s all;
 	transition: 0.2s 0s all;
-	transform: translateX(120%);
+	-webkit-transform: translateX(120%);
+	    -ms-transform: translateX(120%);
+	        transform: translateX(120%);
 }
 .whatsapp-button:hover {
 	cursor: pointer;
-	transform: scale(1.3);
+	-webkit-transform: scale(1.3);
+	    -ms-transform: scale(1.3);
+	        transform: scale(1.3);
 	right: 15px;
 }
 /* footer */
 footer {
 	padding: 10px 100px;
+	-webkit-transition: background 0.2s;
+	-o-transition: background 0.2s;
 	transition: background 0.2s;
 	cursor: pointer;
 }
 .go-top {
 	width: 100%;
 	text-align: center;
+	-webkit-transition: color 0.2s;
+	-o-transition: color 0.2s;
 	transition: color 0.2s;
 }
 .go-top:hover {

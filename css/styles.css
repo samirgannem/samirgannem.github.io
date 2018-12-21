@@ -287,7 +287,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 .contact-form * {
 	margin: 10px 0;
 }
-.contact-form input[type="text"] {
+.contact-form input[type="text"], .contact-form input[type="email"] {
 	background-color: inherit;
 	border: 1px solid var(--for-shadows);
 	color: var(--for-clear-bg);

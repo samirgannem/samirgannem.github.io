@@ -44,7 +44,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 
 .content-section {
 	width: 100%;
-	padding: 4em;
+	padding: 100px;
 }
 .content-section:nth-child(odd) {
 	background-color: var(--container-bg);
@@ -55,14 +55,6 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	background-color: var(--color-2);
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23eddeeb' fill-opacity='0.15'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
-
-.section-paragraph {
-	font-size: 1.2rem;
-	margin-bottom: 2em;
-	text-align: center;
-	padding: 0 2em 0 2em;
-}
-
 /* Navbar */
 .navbar-wrapper {
  position: fixed;

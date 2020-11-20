@@ -8,6 +8,9 @@ const DOMElements = {
  'serviceDescription': Array.from(document.querySelectorAll('.service-description')),
  'navbarBrandTitle': document.querySelector('.navbar-brand-title'),
  'navbarBrandImage': document.querySelector('.navbar-brand-image'),
+ 'container': document.querySelector('.container'),
+ 'progressBar': document.querySelector('.progress-bar')
+
 }
 
 //
@@ -23,13 +26,14 @@ window.addEventListener('click', e => {
  if(eventTarget.matches('.nav-contact') || eventTarget.matches('.navbar-link-button')) {
   scrollToContact(DOMElements);
  }
- if(eventTarget.matches('.go-top') || eventTarget.matches('footer') || eventTarget.matches('.nav-home') || eventTarget.matches('.fa-home')) {
+ if(eventTarget.matches('.go-top') || eventTarget.matches('footer') || eventTarget.matches('.nav-home') || eventTarget.matches('.fa-chevron-up') || eventTarget.matches('.navbar-brand-image') || eventTarget.matches('.navbar-brand-title')) {
   scrollToTop(DOMElements);
  }
 });
 // scroll event handler
 window.addEventListener('scroll', e => {
  wAppAndNavStyling(DOMElements);
+ handleProgressBar(DOMElements);
 });
 
 // resize event handler
@@ -85,4 +89,12 @@ function fixServicesHeight(DOMElements) {
   }
  });
 
+}
+
+function handleProgressBar(DOMElements) {
+  const { container, progressBar } = DOMElements;
+  const containerHeight = container.clientHeight - window.innerHeight;
+  const offset = window.scrollY;
+
+  progressBar.style.width = `${(offset / containerHeight) * 100}%`
 }

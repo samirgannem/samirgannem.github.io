@@ -21,18 +21,18 @@ h3 { font-size: 26px; font-family: 'Raleway'}
 p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 
 :root {
- --color-1: #0c2330;
- --color-2: #0277bd;
- --color-3: #0087d4;
- --color-4: #225b7c;
+ --color-1: #343F8C;
+ --color-2: #3796D3;
+ --color-3: #3666AC;
+ --color-4: #343F8C;
 	--color-5: rgba(255, 255, 255, 0.5);
 	--color-6: #85BC8D;
-	--color-7: #74B39D;
+	--color-7: #3796D3;
 	--white: #fff;
 	--color-bgsec-1: #F2E8F1;
 	--color-bgsec-2: #EDDEEB;
 	--transparent: rgba(0, 0, 0, 0);
-	--translucent: rgba(0, 60, 95, 0.95);
+	--translucent: #1c365ef1;
 	--for-clear-bg: #243442;
 	--container-bg: rgb(243, 243, 243);
 	--for-shadows: rgba(0, 0, 0, 0.35);
@@ -51,7 +51,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	color: var(--for-clear-bg);
 }
 .content-section:nth-child(even) {
-	background-color: var(--color-2);
+	background-color: var(--color-3);
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23eddeeb' fill-opacity='0.15'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 /* Navbar */
@@ -67,11 +67,11 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
  flex-direction: row;
  justify-content: space-between;
  align-items: center;
-	padding: 15px 35px;
+ padding: 15px 35px;
  background: var(--transparent);
-	width: 100%;
-	transition: background 0.3s;
-	z-index: 10;
+ width: 100%;
+ transition: background 0.4s;
+ z-index: 10;
 }
 .progress-bar {
  display: block;
@@ -139,7 +139,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
  background-size: cover;
  background-position: center;
  width: 100%;
- height: 100vh;
+ height: 100%;
  -webkit-filter: opacity(20%) saturate(10%);
          filter: opacity(20%) saturate(10%);
 }
@@ -357,10 +357,7 @@ footer {
 	text-align: center;
 	transition: color 0.2s;
 }
-.go-top:hover {
-	color: #000;
-	cursor: pointer;
-}
+
 footer:hover {
-	background: var(--color-6);
+	background: var(--color-4);
 }

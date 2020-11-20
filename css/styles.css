@@ -121,7 +121,9 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	transition: all 0.5s;
 }
 .progress-bar {
-	border: 1px solid var(--color-7);
+	width: 0px;
+	border-top: 3px solid var(--color-6);
+	opacity: 0.8;
 }
 /* Hero */
 .hero-container {

@@ -2,14 +2,9 @@
  .content-section {
   padding: 50px;
  }
- .navbar {
-  padding: 10px 60px;
- }
+
  .contact {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
+  flex-direction: column !important;
  }
  .map-wrapper {
   margin-bottom: 10px;
@@ -18,16 +13,9 @@
 
 @media screen and (max-width: 820px) {
  .row {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
  }
  .service-container {
   width: 100%;
@@ -42,19 +30,13 @@
 
 @media screen and (max-width: 460px) {
  .hero-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
  }
  .name, .last-name {
-  font-size: 1.2em;
+  font-size: 1em;
  }
  .slogan {
   font-size: 1em;
@@ -62,10 +44,13 @@
  .content-section {
   padding: 15px;
  }
- .navbar {
-  padding: 10px 15px;
- }
  .hero-header {
   top: 0;
- } 
+ }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand-title {
+    display: none;
+  }
 }

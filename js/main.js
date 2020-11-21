@@ -67,7 +67,7 @@ function scrollToTop(DOMElements) {
 function wAppAndNavStyling(DOMElements) {
  const { whatsAppButton, heroContainer, navbar, navbarBrandTitle, heroHeader } = DOMElements;
  const STATIC_TRIGGER_HEIGHT = 10;
- const triggerHeight = heroContainer.offsetHeight;
+ const triggerHeight = heroContainer.offsetHeight - heroHeader.offsetHeight;
 
  if (window.pageYOffset >= STATIC_TRIGGER_HEIGHT) {
   whatsAppButton.style.transform = 'translateX(0)';

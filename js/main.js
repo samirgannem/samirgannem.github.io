@@ -9,8 +9,8 @@ const DOMElements = {
  'navbarBrandTitle': document.querySelector('.navbar-brand-title'),
  'navbarBrandImage': document.querySelector('.navbar-brand-image'),
  'container': document.querySelector('.container'),
- 'progressBar': document.querySelector('.progress-bar')
-
+ 'progressBar': document.querySelector('.progress-bar'),
+ 'heroHeader': document.querySelector('.hero-header'),
 }
 
 //
@@ -65,17 +65,21 @@ function scrollToTop(DOMElements) {
 }
 
 function wAppAndNavStyling(DOMElements) {
- const { whatsAppButton, heroContainer, navbar, navbarBrandTitle, navbarBrandImage } = DOMElements;
- const triggerHeight = heroContainer.offsetHeight - navbarBrandImage.offsetHeight;
- 
- if (window.pageYOffset >= triggerHeight) {
+ const { whatsAppButton, heroContainer, navbar, navbarBrandTitle, heroHeader } = DOMElements;
+ const STATIC_TRIGGER_HEIGHT = 10;
+ const triggerHeight = heroContainer.offsetHeight;
+
+ if (window.pageYOffset >= STATIC_TRIGGER_HEIGHT) {
   whatsAppButton.style.transform = 'translateX(0)';
   navbar.style.background = 'var(--translucent)';
-  navbarBrandTitle.style.opacity = 1;
+  if(window.scrollY >= triggerHeight) {
+    navbarBrandTitle.style.opacity = 1;
+  } else {
+    navbarBrandTitle.style.opacity = 0;
+  }
  } else {
   whatsAppButton.style.transform = 'translateX(120%)';
   navbar.style.background = 'var(--transparent)';
-  navbarBrandTitle.style.opacity = 0;
  }
 }
 function fixServicesHeight(DOMElements) {

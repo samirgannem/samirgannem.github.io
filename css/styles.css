@@ -41,6 +41,20 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	--for-headers: rgb(53, 53, 53);
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bgsec-1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-7);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-7);
+}
+
 .content-section {
 	width: 100%;
 	padding: 100px;

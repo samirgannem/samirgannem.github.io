@@ -12,6 +12,12 @@ const DOMElements = {
   contactForm: document.querySelector('.contact-form'),
 };
 
+const formElements = {
+  inputName: document.querySelector('#input-name'),
+  inputEmail: document.querySelector('#input-email'),
+  inputMessage: document.querySelector('#input-message'),
+}
+
 //
 // handlers
 //
@@ -110,11 +116,23 @@ async function formSubmitHandler(e) {
   e.preventDefault();  
   const { contactApiUrl } = config;
 
-  const response = await fetch(contactApiUrl, {
-    method: 'POST',
-    body: {}
-  });
+  const name = formElements.inputName.value;
+  const email = formElements.inputEmail.value;
+  const message = formElements.inputMessage.value;
 
-  console.log(response)
-  
+  if(!name || !email || !message) return;
+
+  try {
+    await fetch(contactApiUrl, {
+      method: 'POST',
+      body: {
+        name, email, message
+      }
+    });
+    formElements.inputName.value = ''
+    formElements.inputEmail.value = ''
+    formElements.inputMessage.value = ''
+  } catch(err) {
+    return err.message;
+  }
 }

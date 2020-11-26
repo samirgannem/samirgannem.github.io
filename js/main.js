@@ -125,9 +125,9 @@ async function formSubmitHandler(e) {
   try {
     await fetch(contactApiUrl, {
       method: 'POST',
-      body: {
+      body: JSON.stringify({
         name, email, message
-      }
+      })
     });
     formElements.inputName.value = ''
     formElements.inputEmail.value = ''

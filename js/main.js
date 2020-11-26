@@ -122,12 +122,19 @@ async function formSubmitHandler(e) {
 
   if(!name || !email || !message) return;
 
+  const body = JSON.stringify({ 
+    name, 
+    email, 
+    message 
+  });
+
   try {
     await fetch(contactApiUrl, {
       method: 'POST',
-      body: JSON.stringify({
-        name, email, message
-      })
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      }),
+      body
     });
     formElements.inputName.value = ''
     formElements.inputEmail.value = ''

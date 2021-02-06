@@ -74,8 +74,10 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
  top: 0;
  left: 0;
  z-index: 10;
-	width: 100%;
+ width: 100%;
+
 }
+
 .navbar {
  display: flex;
  flex-direction: row;
@@ -87,6 +89,20 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
  transition: background 0.4s;
  z-index: 10;
 }
+
+.navbarR {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row;
+	justify-content: center;
+	align-items: right;
+	padding: 15px 35px;
+	background: var(--transparent);
+	width: 100%;
+
+}
+
 .progress-bar {
  display: block;
  width: 100%;
@@ -125,14 +141,15 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
    }
 
 .btnApp-nav-footer .btnApp-links {
-	/*width: 100%;*/
+	/*width: 100%;
 	display: flex;
     justify-content: space-between;
-    align-items: center;
-	justify-content: center;
+    align-items: right;
+	justify-content: right;
  	border-radius: 5px;
-	margin-bottom: 1.5rem;
-	margin-top: 1.5rem;
+	/*margin-bottom: 1.5rem;*/
+	/*margin-left: -19rem;*/
+
 }
 .btnApp-link-button:hover {
 	cursor: pointer;
@@ -141,17 +158,26 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 }
 
 .btnApp-link-button {
- 	display: block;
+	display: flex;
+	padding: 12px;
+ 	text-align: right;
+ 	border-radius: 5px;
+ 	background: var(--transparent);
+	border: 1px solid #fff;
+	transition: all 0.5s;	
+ 	/*display: flex;
 	width: 100px;
+	height: 45px;
 	padding: 12px;
 	text-align: center;
 	text-justify: center;
 	color: var(--white);
  	border-radius: 5px;
- 	background: var(--translucent);
-	border: 1px solid var(--translucent);
-	margin-right: 0.50rem;	
-	/*transition: all 0.5s;*/
+ 	background: var(--transparent);
+	border: 1px solid var(--white);
+	margin-right: 0.50rem;
+	margin-top: -1.75rem;
+	margin-bottom: 7rem;*/	
 }
 
 .btnApp-link.dev-finance {

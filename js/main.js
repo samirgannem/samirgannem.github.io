@@ -36,6 +36,9 @@ window.addEventListener('click', (e) => {
   if (eventTarget.matches('.go-top') || eventTarget.matches('footer') || eventTarget.matches('.nav-home') || eventTarget.matches('.fa-chevron-up') || eventTarget.matches('.navbar-brand-image') || eventTarget.matches('.navbar-brand-title')) {
     scrollToTop(DOMElements);
   }
+  if (eventTarget.matches('.dev-Finance') || eventTarget.matches('.btnApp-link-button')) {
+    opeAppnFinance(DOMElements);
+  };
 });
 // scroll event handler
 window.addEventListener('scroll', (e) => {
@@ -57,6 +60,11 @@ function redirectWhatsapp() {
   const num = 556699331539;
   const url = 'https://api.whatsapp.com/send?phone=';
   window.open(url + num, '__blank');
+}
+
+function opeAppnFinance() {
+  const urlApp = 'https://informaticasg.com.br/devFinance';
+  window.open(urlApp, '__blank');
 }
 
 function scrollToContact(DOMElements) {

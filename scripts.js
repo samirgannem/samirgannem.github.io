@@ -18,37 +18,13 @@ const Modal = {
     }
 }
 
-// Array transactions
-/*const transactions = [
-    {
-        //id: 1,
-        description: 'Luz',
-        amount: -50000,
-        date: '23/01/2021',
-    },
-    {
-        //id: 2,
-        description: 'Website',
-        amount: 500000,
-        date: '23/01/2021',
-    },
-    {
-        //id: 3,
-        description: 'Internet',
-        amount: -20000,
-        date: '23/01/2021',
-    },
-]*/
-
-// Total transactions
 const Storage = {
     get() {
         return JSON.parse(localStorage.getItem("dev.finances:transactions")) || []
     },
 
     set(transactions) {
-        localStorage.setItem("dev.finances:transactions",
-        JSON.stringify(transactions))
+        localStorage.setItem("dev.finances:transactions", JSON.stringify(transactions))
     }
 }
 
@@ -95,6 +71,30 @@ const Transaction = {
         return Transaction.incomes() + Transaction.expenses();
     }
 }
+
+// Array transactions
+/*const transactions = [
+    {
+        //id: 1,
+        description: 'Luz',
+        amount: -50000,
+        date: '23/01/2021',
+    },
+    {
+        //id: 2,
+        description: 'Website',
+        amount: 500000,
+        date: '23/01/2021',
+    },
+    {
+        //id: 3,
+        description: 'Internet',
+        amount: -20000,
+        date: '23/01/2021',
+    },
+]*/
+
+// Total transactions
 
 // Substituir os dados do HTML com os dados do JS
 // DOM Document Object Model
@@ -240,11 +240,11 @@ const Form = {
 
 const App = {
     init() {
-        Transaction.all.forEach(function(transaction, index){
-            DOM.addTransaction(transaction, index)
-        })
-        
+        Transaction.all.forEach(DOM.addTransaction)
+          
         DOM.updateBalance()
+
+        Storage.set(Transaction.all)
         
 
     },

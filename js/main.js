@@ -37,7 +37,7 @@ window.addEventListener('click', (e) => {
     scrollToTop(DOMElements);
   }
   if (eventTarget.matches('.dev-Finance') || eventTarget.matches('.btnApp-link-button')) {
-    opeAppnFinance(DOMElements);
+    openAppFinance(DOMElements);
   };
 });
 // scroll event handler
@@ -62,7 +62,7 @@ function redirectWhatsapp() {
   window.open(url + num, '__blank');
 }
 
-function opeAppnFinance() {
+function openAppFinance() {
   const urlApp = 'https://informaticasg.com.br/devFinance';
   window.open(urlApp, '__blank');
 }

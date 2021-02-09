@@ -63,7 +63,7 @@ function redirectWhatsapp() {
 }
 
 function openAppFinance() {
-  const urlApp = 'https://informaticasg.com.br/devFinance';
+  const urlApp = './devFinance/index.html';
   window.open(urlApp, '__blank');
 }
 

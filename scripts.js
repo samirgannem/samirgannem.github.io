@@ -35,6 +35,7 @@ const Transaction = {
         Transaction.all.push(transaction)
         App.reload()
     },
+    
 
     remove(index) {
         Transaction.all.splice(index, 1)

@@ -128,9 +128,9 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 }
 
 .right-navbar-side {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 0.25rem;
+	display: flex;
+	/*grid-template-columns: 1fr;
+	grid-gap: 0.25rem;*/
 
 }
 

@@ -129,7 +129,7 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 
 .right-navbar-side {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-gap: 0.25rem;
 
 }
@@ -172,8 +172,8 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	color: inherit;
    }
 
-.btnApp-nav-footer .btnApp-links {
-	/*width: 100%;
+/*.btnApp-nav-footer .btnApp-links {
+	width: 100%;
 	display: flex;
     justify-content: space-between;
     align-items: right;
@@ -182,7 +182,8 @@ p, span, li, a { font-size: 16px; font-family: 'Fira Sans'}
 	/*margin-bottom: 1.5rem;*/
 	/*margin-left: -19rem;*/
 
-}
+/*}*/
+
 .btnApp-link-button:hover {
 	cursor: pointer;
 	background: var(--color-7);
@@ -483,3 +484,12 @@ footer:hover {
 	background: var(--color-4);
 }
 
+/* Botton DevFinance
+          <ul class="navbar-links">
+            <li class="navbar-link-button">
+              <p href="" class="navbar-link dev-Finance">
+                Nossos Apps
+              </p>
+            </li>
+          </ul>
+*/

@@ -124,7 +124,7 @@ async function formSubmitHandler(e) {
   e.preventDefault();  
   const { contactApiUrl } = config;
 
-  const from = formElements.inputName.value;
+  const from = `${formElements.inputName.value} <${formElements.inputEmail.value}>`;
   const replyTo = formElements.inputEmail.value;
   const text = formElements.inputMessage.value;
 

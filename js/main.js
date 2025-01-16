@@ -127,7 +127,7 @@ async function formSubmitHandler(e) {
   const from = `${formElements.inputName.value} <${formElements.inputEmail.value}>`;
   const replyTo = formElements.inputEmail.value;
   const text = formElements.inputMessage.value;
-  const subject = `${formElements.inputName.value} from Informatica SG`;
+  const subject = `${formElements.inputName.value} from Informática SG`;
 
   if(!from || !replyTo || !text) {
     alert('Preencha as informações!');

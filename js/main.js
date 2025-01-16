@@ -141,7 +141,7 @@ async function formSubmitHandler(e) {
   try {
     await fetch(contactApiUrl, {
       method: 'POST',
-      mode: 'no-cors',
+      // mode: 'no-cors',
       headers: new Headers({
         'Content-Type': 'application/json'
       }),

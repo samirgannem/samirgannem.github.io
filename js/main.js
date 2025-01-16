@@ -128,7 +128,10 @@ async function formSubmitHandler(e) {
   const replyTo = formElements.inputEmail.value;
   const text = formElements.inputMessage.value;
 
-  if(!from || !replyTo || !text) return;
+  if(!from || !replyTo || !text) {
+    alert('Preencha as informações!');
+    return;
+  }
 
   const body = JSON.stringify({ 
     from, 
@@ -139,18 +142,25 @@ async function formSubmitHandler(e) {
   });
 
   try {
+    sending.style.display = 'inline';
     await fetch(contactApiUrl, {
       method: 'POST',
-      // mode: 'no-cors',
-      headers: new Headers({
+      mode: 'cors',
+      headers: {
         'Content-Type': 'application/json'
-      }),
+      },
       body
     });
+
     formElements.inputName.value = ''
     formElements.inputEmail.value = ''
     formElements.inputMessage.value = ''
+    sending.style.display = 'none';
+    alert('Formulario enviado corretamente');
   } catch(err) {
+    console.log(err)
+    sending.style.display = 'none';
+    alert('Erro enviando o formulario');
     return err.message;
   }
 }

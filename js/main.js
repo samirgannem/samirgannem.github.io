@@ -127,6 +127,7 @@ async function formSubmitHandler(e) {
   const from = `${formElements.inputName.value} <${formElements.inputEmail.value}>`;
   const replyTo = formElements.inputEmail.value;
   const text = formElements.inputMessage.value;
+  const subject = `${formElements.inputName.value} from Informatica SG`;
 
   if(!from || !replyTo || !text) {
     alert('Preencha as informações!');
@@ -136,7 +137,7 @@ async function formSubmitHandler(e) {
   const body = JSON.stringify({ 
     from, 
     to: "informaticasgcv@gmail.com",
-    subject: "Visita Informatica SG",
+    subject,
     text,
     replyTo
   });

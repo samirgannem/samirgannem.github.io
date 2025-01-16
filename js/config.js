@@ -1,3 +1,3 @@
 var config = {
-  contactApiUrl: 'https://contact-email-service.herokuapp.com/contact',
+  contactApiUrl: 'https://controlecontas.ddns.net:3001/send-email',
 }

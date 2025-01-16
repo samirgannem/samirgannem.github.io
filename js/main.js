@@ -124,16 +124,18 @@ async function formSubmitHandler(e) {
   e.preventDefault();  
   const { contactApiUrl } = config;
 
-  const name = formElements.inputName.value;
-  const email = formElements.inputEmail.value;
-  const message = formElements.inputMessage.value;
+  const from = formElements.inputName.value;
+  const replyTo = formElements.inputEmail.value;
+  const text = formElements.inputMessage.value;
 
-  if(!name || !email || !message) return;
+  if(!from || !replyTo || !text) return;
 
   const body = JSON.stringify({ 
-    name, 
-    email, 
-    message 
+    from, 
+    to: "informaticasgcv@gmail.com",
+    subject: "Visita Informatica SG",
+    text,
+    replyTo
   });
 
   try {

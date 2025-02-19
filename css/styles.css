@@ -533,3 +533,11 @@ footer:hover {
 	width: 18rem;
 	font-size: 1rem;
 }
+
+.image_left {
+	width: auto;
+	height: 150px;
+	background-size: cover !important;
+	background-position: left !important;
+	background-repeat: no-repeat !important;
+}

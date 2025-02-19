@@ -15,6 +15,7 @@ const DOMElements = {
 const formElements = {
   inputName: document.querySelector('#input-name'),
   inputEmail: document.querySelector('#input-email'),
+  inputPhone: document.querySelector('#input-phone'),
   inputMessage: document.querySelector('#input-message'),
 }
 
@@ -31,6 +32,11 @@ window.addEventListener('click', (e) => {
     redirectWhatsapp(DOMElements);
   }
   if (eventTarget.matches('.nav-contact') || eventTarget.matches('.navbar-link-button')) {
+    formElements.inputMessage.value = "";
+    scrollToContact(DOMElements);
+  }
+  if (eventTarget.matches('.content-link-button')) {
+    formElements.inputMessage.value = "Desejo uma apresentação do sistema SG de automação comercial.";
     scrollToContact(DOMElements);
   }
   if (eventTarget.matches('.go-top') || eventTarget.matches('footer') || eventTarget.matches('.nav-home') || eventTarget.matches('.fa-chevron-up') || eventTarget.matches('.navbar-brand-image') || eventTarget.matches('.navbar-brand-title')) {
@@ -126,7 +132,7 @@ async function formSubmitHandler(e) {
 
   const from = `${formElements.inputName.value} <${formElements.inputEmail.value}>`;
   const replyTo = formElements.inputEmail.value;
-  const text = formElements.inputMessage.value;
+  const text = `${formElements.inputMessage.value} - Telefone: ${formElements.inputPhone.value}`;
   const subject = `${formElements.inputName.value} from Informática SG`;
 
   if(!from || !replyTo || !text) {
@@ -155,6 +161,7 @@ async function formSubmitHandler(e) {
 
     formElements.inputName.value = ''
     formElements.inputEmail.value = ''
+    formElements.inputPhone.value = ''
     formElements.inputMessage.value = ''
     sending.style.display = 'none';
     alert('Formulario enviado corretamente');
@@ -165,3 +172,4 @@ async function formSubmitHandler(e) {
     return err.message;
   }
 }
+

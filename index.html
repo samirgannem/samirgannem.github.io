@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Serviço de soluções informáticas. Reparação de computadores, laptops, telefones celulares, impressoras, configuração de servidores, desenvolvimento de páginas web." />
+    content="Serviço de soluções informáticas. Reparação de computadores, laptops, telefones celulares, impressoras, configuração de servidores, sistema, ERP, automação comercial, desenvolvimento de páginas web." />
   <meta name="keywords"
     content="computer, computador, laptop, notebook, smartphone, fix, repair, conserto, impressora, printer, desenvolvimento, servidores, server, servidor, redes, red, software, sistema operacional">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -58,6 +58,57 @@
     </div>
     <!-- section-1 -->
     <div class="content-section services">
+      <div class="row" id="row-1">
+        <div class="sgbr-container">
+          <div class="image" style="background: url('./images/sgmastergr.jpg')"></div>
+          <div class="service-description">
+            <h2 class="service-header">Sistema de Automação Comercial</h2>
+            <div style="display: flex; text-align: left">
+              <div style="margin-left: 8%; width: 23%;">
+                <li class="sg-functions">Cliente</li>
+                <li class="sg-functions">Estoque</li>
+                <li class="sg-functions">Fornecedor</li>
+                <li class="sg-functions">Transportadora</li>
+                <li class="sg-functions">Agenda</li>
+                <li class="sg-functions">Aluguel</li>
+                <li class="sg-functions">Banco</li>
+              </div>
+              <div style="width: 23%">
+                <li class="sg-functions">Consulta de estoque entre matriz e filial</li>
+                <li class="sg-functions">Ordem de produção</li>
+                <li class="sg-functions">Caixa</li>
+                <li class="sg-functions">Compras</li>
+                <li class="sg-functions">Condicional</li>
+                <li class="sg-functions">CTRC</li>
+                <li class="sg-functions">GNRE</li>
+              </div>
+              <div style="width: 23%">
+                <li class="sg-functions">NF-e</li>
+                <li class="sg-functions">NFC-e</li>
+                <li class="sg-functions">MDF-e</li>
+                <li class="sg-functions">CF-e SAT e MF-e</li>
+                <li class="sg-functions">Nota Manual</li>
+                <li class="sg-functions">Pré-venda</li>
+                <li class="sg-functions">Orçamento</li>
+              </div>
+              <div style="width: 23%">
+                <li class="sg-functions">Contas a pagar</li>
+                <li class="sg-functions">Contas a receber</li>
+                <li class="sg-functions">Pedidos de compra</li>
+                <li class="sg-functions">Pedidos de venda</li>
+                <li class="sg-functions">SPED e SINTEGRA</li>
+                <li class="sg-functions">LCDPR <span style="font-size: 0.5rem;">(livro caixa do produtor rural)</span></li>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: center; margin: 1.5rem 0 0 0">
+                <p href="#"
+                  class="content-link-button">Peça uma apresentação gratis!
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row" id="row-1">
         <div class="service-container">
           <div class="image" style="background: url('./images/maintenance.jpg')"></div>
@@ -118,10 +169,14 @@
         </div>
         <form class="contact-form">
           <h2>Contato</h2>
-          <input type="text" name="name" id="input-name" placeholder="Nome" autocomplete="off">
-          <input type="email" name="email" id="input-email" placeholder="Email" autocomplete="off">
+          <input type="text" name="name" id="input-name" placeholder="Nome" autocomplete="off" required>
+          <input type="email" name="email" id="input-email" placeholder="Email" autocomplete="off" required>
+          <input type="text" name="phone" id="input-phone" placeholder="(XX) XXXX-XXXX" autocomplete="off"
+            pattern="\(\d{2}\) \d{4}-\d{4}|\(\d{2}\) \d{5}-\d{4}|\(\d{2}\)\d{4}-\d{4}|\(\d{2}\)\d{5}-\d{4}|\d{10}|\(\d{2}\) \d{8}|\(\d{2}\) \d{9}|\d{11}|\(\d{2}\)\d{8}|\(\d{2}\)\d{9}|\d{11}"
+            required
+          >
           <textarea name="message" id="input-message" cols="10" rows="10" placeholder="Mensagem"
-            autocomplete="off"></textarea>
+            autocomplete="off" required></textarea>
           <input type="submit" name="submit" value="Enviar">
           <span id="sending" style="color: green; display: none; text-align: center; font-size: 12px;">
             Enviando...</span>

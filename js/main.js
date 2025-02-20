@@ -45,6 +45,9 @@ window.addEventListener('click', (e) => {
   if (eventTarget.matches('.dev-Finance') || eventTarget.matches('.btnApp-link-button')) {
     openAppFinance(DOMElements);
   };
+  if (eventTarget.matches('.content-link-button-controle-contas')) {
+    openControleContas(DOMElements);
+  };
 });
 // scroll event handler
 window.addEventListener('scroll', (e) => {
@@ -173,3 +176,7 @@ async function formSubmitHandler(e) {
   }
 }
 
+function openControleContas() {
+  const urlApp = 'https://controlecontas.ddns.net';
+  window.open(urlApp, '__blank');
+}

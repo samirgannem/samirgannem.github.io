@@ -4,8 +4,8 @@ const mapEl = document.querySelector('.map');
 
 function initMap() {
  const location = {
-  lat:  -15.5481646,
-  lng: -55.1586333
+  lat:  -15.559750,
+  lng: -55.159126
  };
 
  const map = new google.maps.Map(mapEl, {

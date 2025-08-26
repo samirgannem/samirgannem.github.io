@@ -177,6 +177,6 @@ async function formSubmitHandler(e) {
 }
 
 function openControleContas() {
-  const urlApp = 'https://controlecontas.ddns.net';
+  const urlApp = 'https://appcontas.informaticasg.com.br';
   window.open(urlApp, '__blank');
 }

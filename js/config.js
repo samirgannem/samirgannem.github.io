@@ -1,3 +1,3 @@
 var config = {
-  contactApiUrl: 'https://controlecontas.ddns.net/send-email',
+  contactApiUrl: 'https://appcontas.informaticasg.com.br/send-email',
 }

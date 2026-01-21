@@ -177,6 +177,6 @@ async function formSubmitHandler(e) {
 }
 
 function openControleContas() {
-  const urlApp = 'https://appcontas.informaticasg.com.br';
+  const urlApp = 'https://appcontas.informaticasg.com.br/createUser';
   window.open(urlApp, '__blank');
 }
